@@ -1,0 +1,59 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: beige;
+    padding: 5px;
+    margin: 15px;
+    font-size: 25px;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: 1.95em;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Default single-column layout */
+    gap: 10px; /* Space between grid items */
+}
+
+/* General figure styling */
+figure {
+    position: relative; /* For positioning the description inside the image */
+    border: 3px solid #333; /* Neat border */
+    border-radius: 50%; /* Circular shape */
+    overflow: hidden; /* Ensures content stays within the circle */
+    width: 200px; /* Set a fixed size */
+    height: 200px; /* Make height equal to width for circular shape */
+    margin: auto; /* Center align the figure */
+}
+
+figure img {
+    width: 100%; /* Make the image fit the figure */
+    height: 100%; /* Cover the entire circular area */
+    object-fit: cover; /* Ensure the image doesn't stretch or skew */
+}
+
+figure figcaption {
+    position: absolute; /* Overlay on top of the image */
+    bottom: 0; /* Position at the bottom of the figure */
+    width: 100%; /* Full width */
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+    color: #fff; /* White text for contrast */
+    text-align: center; /* Center align the text */
+    padding: 10px 0; /* Add padding for better spacing */
+    font-size: 1em; /* Set a readable font size */
+}
+
+/* Tablet view: Triggered at 772px */
+@media (min-width: 772px) {
+    .grid {
+        grid-template-columns: 1fr 1fr; /* Two-column layout */
+        gap: 20px; /* Increase spacing between items */
+    }
+}
